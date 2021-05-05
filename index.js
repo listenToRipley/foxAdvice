@@ -1,21 +1,32 @@
 `use strict`
 
 window.onload = () => {
-  fox()
-  advice()
+  update()
   console.log('window load')
 }
 
-let fox = () => fetch(`https://randomfox.ca/floof/`) 
+let fetchFox = () => fetch(`https://randomfox.ca/floof/`) 
   .then(res => res.json())
-  .then(data => data)
+  .then(img => img)
   .catch(err => console.log(err))
 
   console.log(fox)
 
-let advice = () => fetch(`https://api.adviceslip.com/`)
+let fetchAdvice = () => fetch(`https://api.adviceslip.com/`)
   .then(res => res.json())
   .then(data => data)
   .then(err => console.log(err))
 
   console.log(fox)
+
+let update = () => {
+  fetchbox
+
+  let foxImg = document.querySelectorAll('#foxImage')
+  let adviceId = document.querySelectorAll('#advice')
+
+  advice.setAttribute('class', `${data.id}`)
+
+  foxImg.src = img.image
+  adviceId.innerText = data.advice
+}
