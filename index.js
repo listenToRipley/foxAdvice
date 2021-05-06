@@ -1,37 +1,51 @@
 `use strict`
 
-window.onload = () => {
-  update()
-  console.log('window load')
-}
-
 let fetchFox = () => {
   fetch(`https://randomfox.ca/floof/`) 
     .then(res => res.json())
-    .then(img => img)
+    .then(item => {
+      let img = item.image
+      return img
+    })
+    .then(img => updateImg(img))
     .catch(err => console.log(err))
 }
 
-  console.log(fox)
+ 
 
 let fetchAdvice = () => {
   fetch(`https://api.adviceslip.com/`)
-    .then(res => res.json())
-    .then(data => data)
-    .then(err => console.log(err))
+    .then(res => {
+      console.log(res.json())
+    })
+    // .then(data => {
+    //   console.log(data)
+    // })
+    // .then(err => console.log(err))
 }
 
-  console.log(fox)
 
-let update = () => {
-  fetchFox()
-  fetchAdvice()
+let updateImg = (img) => {
+  console.log('finding image : ', img)
 
   let foxImg = document.querySelectorAll('#foxImage')
-  let adviceId = document.querySelectorAll('#advice')
-
-  advice.setAttribute('class', `${data.id}`)
 
   foxImg.src = img.image
-  adviceId.innerText = data.advice
+
 }
+
+let updateAdvice = (slip) => {
+  let adviceId = document.querySelectorAll('#advice')
+
+  // adviceId.setAttribute('class', `${data.id}`)
+  // adviceId.innerText = slip.advice
+}
+
+window.onload = () => {
+  fetchFox()
+  fetchAdvice()
+  console.log('window load')
+}
+
+console.log('images : ',img)
+
