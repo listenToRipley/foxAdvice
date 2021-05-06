@@ -29,8 +29,9 @@ let updateImg = (img) => {
   console.log('finding image : ', img)
 
   let foxImg = document.querySelectorAll('#foxImage')
-
-  foxImg.src = img.image
+  
+  console.log(foxImg) //return node list 
+  foxImg.src = `${img}`
 
 }
 
