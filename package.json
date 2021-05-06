@@ -1,0 +1,27 @@
+{
+  "name": "foxadvice",
+  "version": "1.0.0",
+  "description": "multi api calls practice",
+  "main": "index.js",
+  "dependencies": {
+    "fetch-jsonp": "^1.1.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/listenToRipley/foxAdvice.git"
+  },
+  "keywords": [
+    "advice",
+    "fox"
+  ],
+  "author": "Natalie Kendrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/listenToRipley/foxAdvice/issues"
+  },
+  "homepage": "https://github.com/listenToRipley/foxAdvice#readme"
+}

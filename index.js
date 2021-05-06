@@ -14,13 +14,27 @@ let fetchFox = () => {
  
 
 let fetchAdvice = () => {
-  fetch(`https://api.adviceslip.com/`)
-    .then(res => {
-      console.log(res.json())
-    })
-    // .then(data => {
-    //   console.log(data)
-    // })
+  fetch(`https://api.adviceslip.com/`, {
+    method: 'GET',
+    header: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(async res => {
+    try {
+      let data = await res.json()
+      console.log('data : ',data)
+      let results = JSON. parse(data)
+      console.log('results : ',results)
+    } catch (err) {
+      console.log(`is there are err? ${err}`)
+    }
+  })
+
+  
+  //  .then(data => {
+  //     console.log(data)
+  //    })
     // .then(err => console.log(err))
 }
 
