@@ -3,15 +3,10 @@ import fetchJsonp from 'fetch-jsonp';
 const fetch = fetchJsonp({Promise: Advice});
 
 let fetchAdvice = () => {
-  fetch(`https://api.adviceslip.com/`, {
-    method: 'GET',
-    header: {
-      'Content-Type': 'application/json'
-    }
-  })
+  fetch(`https://api.adviceslip.com?callback=ad`)
   .then(async res => {
     try {
-      let data = await res.json()
+      let data = await ad(res.json())
       console.log('data : ',data)
       let results = JSON. parse(data)
       console.log('results : ',results)
