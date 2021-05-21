@@ -9,7 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon ./index.html"
+    "test": "test", 
+    "start": "node ./index.html"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/listenToRipley/foxAdvice/issues"
   },
-  "homepage": "https://github.com/listenToRipley/foxAdvice#readme"
+  "homepage": "https://github.com/listenToRipley/foxAdvice/index.html"
 }
