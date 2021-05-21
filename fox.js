@@ -22,7 +22,4 @@ let updateImg = (img) => {
 }
 
 
-window.onload = () => {
-  fetchFox()
-  console.log('window load foxes')
-}
+export default foxAdvice 

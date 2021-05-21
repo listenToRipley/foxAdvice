@@ -33,8 +33,7 @@ let updateAdvice = (slip) => {
   adviceId.innerText = slip.advice
 }
 
-window.onload = () => {
-  fetchAdvice()
-  console.log('window load advices')
+export default {
+  fetchAdvice, 
+  updateAdvice
 }
-

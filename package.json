@@ -11,7 +11,7 @@
   },
   "scripts": {
     "test": "test",
-    "start": "nodemon ."
+    "start": "nodemon ./"
   },
   "repository": {
     "type": "git",
