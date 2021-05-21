@@ -1,8 +1,11 @@
-import {foxAdvice} from "./fox.js";
-import {fetchAdvice, updateAdvice } from "./advice.js"
+const { default: advice } = require("./advice")
+
+fox  = require("./fox")
+advice = require('./advice')
 
 window.onload = () => {
-  fetchFox()
+  fox.fetchFox()
   console.log('window load foxes')
-
+  advice.fetchAdvice()
+  console.log('window load advice')
 }
