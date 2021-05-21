@@ -1,4 +1,4 @@
-import fetchJsonp from 'fetch-jsonp';
+fetchJsonp = reqire('fetch-jsonp');
 
 const fetch = fetchJsonp({Promise: Advice});
 
